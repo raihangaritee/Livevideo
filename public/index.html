@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Reward Call App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">VideoReward</div>
+            <div class="user-info">
+                <span id="user-name"></span>
+                <span id="user-rewards"></span>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Video Call Section -->
+            <div class="video-call-section">
+                <h2>Video Call</h2>
+                <div class="video-container">
+                    <video id="call-video" controls></video>
+                </div>
+                <div class="call-controls">
+                    <button id="start-call-btn">Start Call</button>
+                    <button id="end-call-btn" disabled>End Call</button>
+                </div>
+                <div class="call-info">
+                    <span id="calls-remaining"></span>
+                    <span id="call-timer"></span>
+                </div>
+            </div>
+
+            <!-- Live Chat Section -->
+            <div class="live-chat-section">
+                <h2>Live Chat</h2>
+                <div class="chat-container">
+                    <div id="chat-messages" class="chat-messages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="message-input" placeholder="Type your message...">
+                        <button id="send-message-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
